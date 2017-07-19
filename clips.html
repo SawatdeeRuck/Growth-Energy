@@ -6,8 +6,8 @@
 		<html>
 			<head>
 				<style>
-					H2 { font-size: 13pt; }
-					.body { }
+					H2 { font-size: 11pt; }
+					.body { font-size: 9pt; }
 					.ingress { }
 					.articletitle { }
 					.matched { }
@@ -41,23 +41,25 @@
 								<table border="0" cellpadding="0" cellspacing="0" width="100%" align="left" height="55" style="background-color:#ffffff;" bgcolor="#ffffff">
 									<tr valign="bottom">
 										<td align="left" valign="top" bgcolor="#DBDBDB" style="padding: 0px;">
-											<a href="http://www.growthenergy.org/" target="_blank">
-												<img src="https://raw.githubusercontent.com/SawatdeeRuck/Growth-Energy/master/images/clips-header.png" border="0" alt="growthenergy" /></a>
+												<a href="http://www.growthenergy.org/" target="_blank">
+													<img src="https://raw.githubusercontent.com/SawatdeeRuck/Growth-Energy/master/images/clips-header.png" border="0" alt="growthenergy" /></a>
 											</td>
 										</tr>
 									</table>
 								</td></tr>
-								<tr><td height="25" align="right" style="padding: 10px 20px 0px 10px;"><span class="matched" style="font-size: 15px; font-family: 'Roboto', Arial, sans-serif; color: #7AC142; font-weight: bold; line-height: 18px;">
+								<tr><td height="25" align="right" style="padding: 10px 20px 0px 10px;">
+									<span class="matched" style="font-size: 15px; font-family: 'Roboto', Arial, sans-serif; color: #7AC142; font-weight: bold; line-height: 18px;">
 									<!-- Date is Automatic -->
 
 									<!--Friday, August 19, 2011-->
-									<xsl:value-of select="datetime:day-in-month()" />
-									<xsl:text> </xsl:text>
 									<xsl:value-of select="datetime:month-name()" />
+									<xsl:text> </xsl:text>
+									<xsl:value-of select="datetime:day-in-month()" />
 									<xsl:text disable-output-escaping="yes">&amp;nbsp;</xsl:text>
 
 									<xsl:value-of select="datetime:year()" />
-								</span></td></tr>
+									</span>
+								</td></tr>
 
 								<tr><td bgcolor="#ffffff">
 									<table border="0" cellpadding="0" width="100%" cellspacing="0" align="left" bgcolor="#ffffff">
@@ -70,12 +72,12 @@
 												<tr><td bgcolor="#ffffff" height="20"><xsl:text disable-output-escaping="yes"> &amp;nbsp;</xsl:text></td></tr>
 												<tr>
 													<td bgcolor="#7AC142" style="padding:20px;"><span class="matched" style="font-size: 12px; font-family: 'Roboto', Arial, sans-serif;; color: #ffffff; font-weight: normal;">
-														You’re receiving this newsletter because you're a member of Growth Energy. Not interested in receiving these anymore? Unsubscribe instantly.
+														You're receiving this newsletter because you're a member of Growth Energy. Not interested in receiving these anymore? Unsubscribe instantly.
 													</span></td>
 												</tr>
 												<tr>
 													<td bgcolor="#66A634" style="padding:20px;"><span class="matched" style="font-size: 12px; font-family: 'Roboto', Arial, sans-serif;; color: #ffffff; font-weight: normal;">
-														Copyright © 2017 Growth Energy.
+														Copyright &copy; 2017 Growth Energy.
 													</span></td>
 												</tr>
 
@@ -91,7 +93,8 @@
 					</table>
 				</center>
 			</body>
-		</html>
+			</html>
+
 	</xsl:template>
 
 	<xsl:template match="/newsletter">
@@ -206,9 +209,9 @@
 							<span class="source" style="border:1px solid #7AC142; padding:4px; font-size: 12px; font-family: 'Roboto', Arial, sans-serif;; color: #666666; font-weight: normal; line-height: 25px;">
 
 
-								<xsl:value-of select="day"/>
-								<xsl:text>.</xsl:text>
 								<xsl:value-of select="month"/>
+								<xsl:text>.</xsl:text>
+								<xsl:value-of select="day"/>
 								<xsl:text>.</xsl:text>
 								<xsl:value-of select="year"/> </span>
 								<span class="source" style="font-size: 12px; font-family: 'Roboto', Arial, sans-serif;; color: #666666; font-weight: normal; line-height: 18px;">
