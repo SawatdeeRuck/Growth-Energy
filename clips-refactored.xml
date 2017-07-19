@@ -40,7 +40,7 @@
 							<td bgcolor="#ffffff"> 
 
 						        <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
-						          Latest News Covering the Ethanol Industry ...
+						          Read the latest news that affects the ethanol industry and your business courtesy of Growth Energy ...
 						        </div>
 
 								<table border="0" cellpadding="0" cellspacing="0" width="100%" align="left" height="50" style="background-color:#ffffff;" bgcolor="#ffffff"> 
@@ -53,7 +53,7 @@
 										</tr> 
 									</table> 
 								</td></tr> 
-								<tr><td height="25" align="left" style="padding: 20px 20px 0px 20px;"><span class="matched" style="font-size: 15px; font-family: 'Roboto', Arial, sans-serif; color: #7AC142; font-weight: bold; line-height: 18px;">
+								<tr><td height="25" align="left" style="padding: 20px 20px 0px 20px;"><span class="matched" style="font-size: 15px; font-family: 'Roboto', Arial, sans-serif; color: #7AC142; font-weight: bold; line-height: 20px;">
 									<!-- Date is Automatic -->
 
 									<!--Friday, August 19, 2011-->
@@ -110,7 +110,7 @@
 	<xsl:template match="summary"> 
 		<table cellspacing="0" cellpadding="0" border="0" width="100%" bgcolor="#ffffff"> 
 			<tr> 
-				<td bgcolor="#ffffff" style="padding: 5px 20px 0 20px;"><span class="matched" style="font-size: 14px; font-family: 'Roboto', Arial, sans-serif; line-height: 18px; color: #666666; font-weight: normal;"><xsl:value-of select="summary" disable-output-escaping="yes" /></span></td> 
+				<td bgcolor="#ffffff" style="padding: 5px 20px 0 20px;"><span class="matched" style="font-size: 14px; font-family: 'Roboto', Arial, sans-serif; line-height: 20px; color: #666666; font-weight: normal;"><xsl:value-of select="summary" disable-output-escaping="yes" /></span></td> 
 			</tr> 
 		</table> 
 	</xsl:template> 
@@ -195,7 +195,7 @@
 			<xsl:template match="article"> 
 				<table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff"> 
 					<tr align="left" valign="top"> 
-						<td bgcolor="#ffffff" style="border-bottom: 1px dotted #000000; padding: 0 0 30px;"> 
+						<td bgcolor="#ffffff"> 
 
 							<xsl:if test="(language = 'Arabic')"><xsl:attribute name="align">right</xsl:attribute></xsl:if> 
 							<xsl:if test="language != 'Arabic'"><xsl:attribute name="align">left</xsl:attribute></xsl:if> 
@@ -217,24 +217,24 @@
 								<xsl:value-of select="day"/> 
 								<xsl:text>.</xsl:text> 
 								<xsl:value-of select="year"/> </span> 
-								<span class="source" style="font-size: 12px; font-family: 'Roboto', Arial, sans-serif; color: #666666; font-weight: normal; line-height: 18px;"> 
+								<span class="source" style="font-size: 12px; font-family: 'Roboto', Arial, sans-serif; color: #666666; font-weight: normal; line-height: 20px;"> 
 									<xsl:text disable-output-escaping="yes"> &amp;nbsp;</xsl:text>
 									<xsl:value-of select="source" disable-output-escaping="yes" /> 
 
 								</span> 
 							</div> 
 
-							<div class="ingress" style="font-size: 14px; font-family: 'Roboto', Arial, sans-serif; color: #666666; font-weight: normal; line-height: 18px; margin-top:5px; margin-bottom:5px;"><xsl:value-of select="ingress" disable-output-escaping="yes" /></div> 
+							<div class="ingress" style="font-size: 14px; font-family: 'Roboto', Arial, sans-serif; color: #666666; font-weight: normal; line-height: 20px; margin-top:5px; margin-bottom:5px;"><xsl:value-of select="ingress" disable-output-escaping="yes" /></div> 
 
-							<div class="matched" style="font-size: 14px; font-family: 'Roboto', Arial, sans-serif; color: #666666; font-weight: normal; line-height: 18px; margin-top:5px; margin-bottom:5px;"><xsl:value-of select="matchedSentences" disable-output-escaping="yes"/></div> 
+							<div class="matched" style="font-size: 14px; font-family: 'Roboto', Arial, sans-serif; color: #666666; font-weight: normal; line-height: 20px; margin-top:5px; margin-bottom:5px;"><xsl:value-of select="matchedSentences" disable-output-escaping="yes"/></div> 
 
-							<div><a class="more" style="font-size: 14px; font-family: 'Roboto', Arial, sans-serif; color: #7AC142; font-weight: bold; text-decoration: none; letter-spacing: 1.5px; margin-top:5px; margin-bottom:5px;" OnMouseOver="this.style.textDecoration='underline'; this.style.color='#7ac142'" OnMouseOut="this.style.textDecoration='none';this.style.color='#7ac142'"> 
+							<div><a class="more" style="font-size: 12px; font-family: 'Roboto', Arial, sans-serif; color: #7AC142; font-weight: bold; text-decoration: none; letter-spacing: 1.5px; margin-top:5px; margin-bottom:5px;" OnMouseOver="this.style.textDecoration='underline'; this.style.color='#7ac142'" OnMouseOut="this.style.textDecoration='none';this.style.color='#7ac142'"> 
 								<xsl:attribute name="href"><xsl:value-of select="url"/></xsl:attribute> 
 								<xsl:attribute name="target">_blank</xsl:attribute> 
 								READ STORY > 
 							</a></div> 
 
-							<div class="articleComment" style="font-size: 14px; font-family: 'Roboto', Arial, sans-serif; color: #666666; font-weight: normal; font-style: italic; line-height: 18px; margin-top: 15px; border:1px solid #7AC142; padding:10px;"><xsl:value-of select="comment" disable-output-escaping="yes"/></div> 
+							<div class="articleComment" style="font-size: 14px; font-family: 'Roboto', Arial, sans-serif; color: #666666; font-weight: normal; font-style: italic; line-height: 20px; margin-top: 15px; border:1px solid #7AC142; padding:10px;"><xsl:value-of select="comment" disable-output-escaping="yes"/></div> 
 
 						</td> 
 					</tr> 
