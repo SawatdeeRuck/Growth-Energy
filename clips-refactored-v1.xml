@@ -10,9 +10,15 @@
 					<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 				<!--<![endif]-->
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet" />
 				<!--[if (gte mso 9)|(IE)]>
 				<style type="text/css">
 					table {border-collapse: collapse;}
+				</style>
+				<![endif]-->
+					<!--[if mso]>
+				<style type="text/css">
+				body, table, td, p, div, span {font-family: 'Roboto', Arial, Helvetica, sans-serif !important;}
 				</style>
 				<![endif]-->
 				<style> 
@@ -42,21 +48,17 @@
 					.more a:hover { } 
 					@media screen and (max-width: 630px){
 					*[class="mobile-column"] {width: 100% !important;} 
-				</style> 
+					</style> 
 			</head> 
 			<body class="body" style="background-color: #DBDBDB; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-left: 0px; padding-top: 0px; padding-right:0px;"> 
-				<!--[if mso]>
-				<style type="text/css">
-				body, table, td, p, .source, .ingress, .matched, .more, .articleComment, .categoryname {font-family: 'Roboto', Arial, Helvetica, sans-serif !important;}
-				</style>
-				<![endif]-->
+				<xsl:comment></xsl:comment>
 				<center> 
 					<table cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" class="mobile-column" style="border: #DBDBDB solid 0px; margin-top: 0px; margin-right: 0px; margin-left: 0px; margin-bottom: 0px; padding: 0px; width: 660px;"> 
 						<tr> 
 							<td bgcolor="#ffffff"> 
 
 						        <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
-						          Read the latest news that affects the ethanol industry and courtesy of Growth Energy.
+						          Read the latest news that affects the ethanol industry, courtesy of Growth Energy.
 						        </div>
 
 								<table border="0" cellpadding="0" cellspacing="0" width="100%" align="left" height="50" style="background-color:#ffffff;" bgcolor="#ffffff">
@@ -245,7 +247,17 @@
 
 							<div class="ingress" style="font-size: 14px; font-family: 'Roboto', Arial, sans-serif; color: #666666; font-weight: normal; line-height: 20px; margin-top:5px; margin-bottom:5px;"><xsl:value-of select="ingress" disable-output-escaping="yes" /></div> 
 
-							<div class="matched" style="font-size: 14px; font-family: 'Roboto', Arial, sans-serif; color: #666666; font-weight: normal; line-height: 20px; margin-top:5px; margin-bottom:5px;"><xsl:value-of select="matchedSentences" disable-output-escaping="yes"/></div> 
+							<!--xsl:choose-->
+							<xsl:if test="(string-length(comment) > 0)">
+							<div class="articleComment" style="font-size: 14px; font-family: 'Roboto', Arial, sans-serif; color: #666666; font-weight: normal; font-style: italic; line-height: 20px; margin-top: 10px;"><xsl:value-of select="comment" disable-output-escaping="yes"/></div> 
+							</xsl:if>
+							<!--xsl:otherwise>
+							 
+							</xsl:otherwise>
+							</xsl:choose-->
+
+							<div class="matched" style="font-size: 14px; font-family: 'Roboto', Arial, sans-serif; color: #666666; font-weight: normal; line-height: 20px; margin-top:5px; margin-bottom:15px; border: 1px solid #7AC142; padding:10px;"><xsl:value-of select="matchedSentences" disable-output-escaping="yes"/></div>
+
 
 							<div><a class="more" style="font-size: 12px; font-family: 'Roboto', Arial, sans-serif; color: #7AC142; font-weight: bold; text-decoration: none; letter-spacing: 1.5px; margin-top:5px; margin-bottom:5px;" OnMouseOver="this.style.textDecoration='underline'; this.style.color='#7ac142'" OnMouseOut="this.style.textDecoration='none';this.style.color='#7ac142'"> 
 								<xsl:attribute name="href"><xsl:value-of select="url"/></xsl:attribute> 
@@ -253,9 +265,7 @@
 								READ STORY > 
 							</a></div> 
 
-							<div class="articleComment" style="font-size: 14px; font-family: 'Roboto', Arial, sans-serif; color: #666666; font-weight: normal; font-style: italic; line-height: 20px; margin-top: 15px; border:1px solid #7AC142; padding:10px;"><xsl:value-of select="comment" disable-output-escaping="yes"/></div> 
-
-						</td> 
+												</td> 
 					</tr> 
 				</table> 
 			</xsl:template> 
